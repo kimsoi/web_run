@@ -6,6 +6,7 @@
 
     for (let i =0; i< stepElems.length; i++){
         // stepElems[i].setAttribute('data-index',i);
-        stepElems[i].CDATA_SECTION_NODE.index //index는 이름 지은 것 
+        stepElems[i].dataset.index = i; //index는 이름 지은 것 
+        graphicElems[i].dataset.index = i;
     }
 })();
