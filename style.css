@@ -45,7 +45,7 @@ img {
 	padding : 1em;
 	padding-bottom: 1px;
 }
-.step{
+.step{ /*말풍선*/
 	margin-bottom: 60vh; /*말풍선 간격*/
 	padding:0.5rem 5em; /*내부 여백*/
 	border-radius: 10px;
