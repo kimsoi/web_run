@@ -41,11 +41,13 @@ img {
 .scroll-text{
 	/*static이 기본값*/
 	position: relative;
+	margin :1em;
+	padding : 1em;
 	padding-bottom: 1px;
 }
 .step{
 	margin-bottom: 60vh; /*말풍선 간격*/
-	padding:0.5rem 1rem; /*내부 여백*/
+	padding:0.5rem 5em; /*내부 여백*/
 	border-radius: 10px;
 	background: rgba(255,255,255,0.8);
 	box-shadow: rgba(0,0,0,0.3) 0 0 3px;
