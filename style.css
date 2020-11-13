@@ -19,6 +19,12 @@ img {
 	max-width : 620px;
 	margin:0 auto;
 }
+.scroll-graphic{
+	/*스크롤해서 화면이 창위에 붙을 때 동작*/
+	position: sticky;
+	top:0;
+	height: 100vh;
+}
 .graphic-item{
 	display: flex; /*화면에 그림을 가운데정렬하고 꽉 채움*/
 	align-items: center; /*세로방향 센터 정렬*/
