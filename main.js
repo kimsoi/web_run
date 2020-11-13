@@ -9,4 +9,4 @@
         stepElems[i].dataset.index = i; //index는 이름 지은 것 
         graphicElems[i].dataset.index = i;
     }
-})();
+})(); 
