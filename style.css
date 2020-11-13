@@ -20,7 +20,12 @@ img {
 	margin:0 auto;
 }
 .graphic-item{
+	display: flex; /*화면에 그림을 가운데정렬하고 꽉 채움*/
+	align-items: center; /*세로방향 센터 정렬*/
+	justify-content: center; /*가로방향 센터 정렬*/
 	position : absolute;
 	left : 0;
 	top : 0;
+	width: 100%;
+	height: 100%;
 }
