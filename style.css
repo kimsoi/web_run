@@ -19,3 +19,8 @@ img {
 	max-width : 620px;
 	margin:0 auto;
 }
+.graphic-item{
+	position : absolute;
+	left : 0;
+	top : 0;
+}
