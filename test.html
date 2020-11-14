@@ -17,18 +17,14 @@
 
     </style>
     <script>
-        window.onloade = function(){ //화면이 load되면 실행
-            let h1 =document.getElementsByTagName("h1")[0];
+        window.onload =function(){
+            let h1 = document.getElementsByTagName("h1")[0];
             window.addEventListener("mousemove",mouseFunc,false);
 
-        //mouse가 움직일때 mouseFunc 함수 실행
-        function mouseFunc(e){
-            h1.innerHTML ="x : "+e.clientX+ "y : " + e.clientY;
-           //console.log(e.clientX,e.clientY);
-        }
-        
-        }
-
+            function mouseFunc(e){
+                h1.innerHTML ="x:"+e.clientX+"y:"+e.clientY;
+            }
+        }   
     </script>
     </head>
     <body>
