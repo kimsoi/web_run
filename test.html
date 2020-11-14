@@ -14,21 +14,30 @@
         h1{
             color: #fff;
         }
+        .cursor_item{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
 
     </style>
     <script>
         window.onload =function(){
             let h1 = document.getElementsByTagName("h1")[0];
+            let cursor_item=document.getElementsByClassName("cursor_item")[0];
             window.addEventListener("mousemove",mouseFunc,false);
 
             function mouseFunc(e){
                 h1.innerHTML ="x:"+e.clientX+"y:"+e.clientY;
+                cursor_item.style.transform = "translate("+e.clientX+"px,"+e.clientY+"px)";
             }
         }   
     </script>
     </head>
     <body>
-        <h1>TEST</h1>     
+        <h1>TEST</h1>
+        <div class="cursor_item"></div>     
   </body>
   </html>
 
