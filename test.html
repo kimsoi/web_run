@@ -8,9 +8,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <style>
+        body{
+            background-color: black;
+        }
+        h1{
+            color: #fff;
+        }
 
     </style>
     <script>
+        window.addEventListener("mousemove",mouseFunc,false);
+        //mouse가 움직일때 mouseFunc 함수 실행
+        function mouseFunc(e){
+           console.log(e.clientX);
+        }
 
     </script>
     </head>
