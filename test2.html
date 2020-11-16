@@ -43,7 +43,13 @@
                 h1.innerHTML ="x:"+e.clientX+"y:"+e.clientY;
                 cursor_item.style.transform = "translate("+e.clientX+"px,"+e.clientY+"px)";
             }
-        }   
+            loop();
+        }  
+        function loop(){
+
+            window.requestAnimationFrame(loop);
+        }
+        
     </script>
     </head>
     <body>
