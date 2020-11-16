@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>test</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <style>
+    
+        
+        body{
+            position: relative;
+            background-color: black;
+            cursor: none;   
+        }
+        h1{
+            color: #fff;
+        }
+        .cursor_item{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            top:0;
+            left:0;
+                     
+        }
+
+    </style>
+    <!-- <style type="text/css">
+        body{cursor: url('cursor.cur'),auto;}
+
+    </style> -->
+    <script>
+        window.onload =function(){
+            let h1 = document.getElementsByTagName("h1")[0];
+            let cursor_item=document.getElementsByClassName("cursor_item")[0];
+            window.addEventListener("mousemove",mouseFunc,false);
+
+            function mouseFunc(e){
+                h1.innerHTML ="x:"+e.clientX+"y:"+e.clientY;
+                cursor_item.style.transform = "translate("+e.clientX+"px,"+e.clientY+"px)";
+            }
+        }   
+    </script>
+    </head>
+    <body>
+        <h1>TEST</h1>
+        
+        <div class="cursor_item"></div>  
+        
+  </body>
+  </html>
+
