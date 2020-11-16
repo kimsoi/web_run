@@ -34,18 +34,30 @@
 
     </style> -->
     <script>
+        let cursor_item;
+        let x =0;
+        let y =0;
+        let mx=0;   //마우스  x
+        let my=0; //마우스 y
+        let speed =0.03; //마우스 얼마의 속도로 따라올지
+        
         window.onload =function(){
             let h1 = document.getElementsByTagName("h1")[0];
-            let cursor_item=document.getElementsByClassName("cursor_item")[0];
+            cursor_item=document.getElementsByClassName("cursor_item")[0];
             window.addEventListener("mousemove",mouseFunc,false);
 
             function mouseFunc(e){
-                h1.innerHTML ="x:"+e.clientX+"y:"+e.clientY;
-                cursor_item.style.transform = "translate("+e.clientX+"px,"+e.clientY+"px)";
+                x= e.clientX;
+                y= e.clientY;
+                h1.innerHTML ="x:"+x+"y:"+y;
+                
             }
             loop();
         }  
         function loop(){
+            mx += (x - mx) *speed;
+            my += (y - my) *speed;
+            cursor_item.style.transform = "translate("+mx+"px,"+my+"px)";
 
             window.requestAnimationFrame(loop);
         }
