@@ -90,10 +90,10 @@
             my += (y - my) *speed;
             //console.log(x,mx)
             h1.innerHTML ="x:"+x+"mx:"+mx; //x와 mx의 값 출력
-            human.style.transform = "translate("+(mx/6)+"px,"+(my/6)+"px)";
+            human.style.transform = "translate("+-(mx/6)+"px,"+ -(my/6)+"px)";
             // my 대신에 -my주면 반대로 움직임
             // 사진을 더 조금 움직이게 하고 싶으면 mx,my값을 나눠준다 -> mx/6,my/원하는 수
-            bg.style.transform = "translate("+ -(mx/6)+"px,"+ -(my/6)+"px)";
+            bg.style.transform = "translate("+ (mx/2)+"px,"+ (my/2)+"px)";
 
             window.requestAnimationFrame(loop);
         }
