@@ -50,7 +50,9 @@
             position: absolute;
             width: 300px;
             left:calc(50% - 150px) ; /*사진 가운데로*/ 
+            z-index: 100;  /*사람 이미지 맨 앞으로 갖고오기*/
         }
+        /* .bg{} */
 
     </style>
     <!-- <style type="text/css">
@@ -59,6 +61,7 @@
     </style> -->
     <script>
         let human;
+        let bg;
         let h1;
 
         let x =0;
@@ -71,6 +74,7 @@
 
             h1 = document.getElementsByTagName("h1")[0]; //마우스 부드럽게
             human = document.getElementsByClassName("human")[0];
+            bg = document.getElementsByClassName("bg")[0];
 
             window.addEventListener("mousemove",mouseFunc,false);
 
@@ -89,7 +93,7 @@
             human.style.transform = "translate("+(mx/6)+"px,"+(my/6)+"px)";
             // my 대신에 -my주면 반대로 움직임
             // 사진을 더 조금 움직이게 하고 싶으면 mx,my값을 나눠준다 -> mx/6,my/원하는 수
-            
+            bg.style.transform = "translate("+ -(mx/6)+"px,"+ -(my/6)+"px)";
 
             window.requestAnimationFrame(loop);
         }
@@ -99,7 +103,7 @@
     <body>
         <h1>test</h1>
         <img src="images/bgc.png" class = "human" alt="사람">
-       
+        <img src="images/bg1.png" class = "bg" alt="사막배경">
         
         
   </body>
