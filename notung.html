@@ -13,7 +13,8 @@
         body{ 
             position: relative;
             background-color: black;
-            cursor: none;   
+            /* cursor: none;    */
+            overflow: hidden;
         }
         h1{
             color: #fff;
@@ -57,27 +58,26 @@
 
     </style> -->
     <script>
-        let cursor_item;
+        let human;
         let h1;
 
         let x =0;
         let y =0;
         let mx=0;   //마우스  x
         let my=0; //마우스 y
-        let speed =0.05; //마우스 얼마의 속도로 따라올지
+        let speed =0.009; //마우스 얼마의 속도로 따라올지
         
         window.onload =function(){
 
             h1 = document.getElementsByTagName("h1")[0]; //마우스 부드럽게
-
-            
+            human = document.getElementsByClassName("human")[0];
 
             window.addEventListener("mousemove",mouseFunc,false);
 
             function mouseFunc(e){
                 x= e.clientX;
                 y= e.clientY;
-                // cursor_item.style.transform = "translate("+x+"px,"+y+"px)";
+                
             }
             loop();  //마우스 부드럽게
         }  
@@ -86,7 +86,7 @@
             my += (y - my) *speed;
             //console.log(x,mx)
             h1.innerHTML ="x:"+x+"mx:"+mx; //x와 mx의 값 출력
-            
+            human.style.transform = "translate("+mx+"px,"+my+"px)";
             
 
             window.requestAnimationFrame(loop);
